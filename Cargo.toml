@@ -2,4 +2,6 @@
 
 members = [
     "generator",
+    "wintab-rs",
+    "rustab",
 ]

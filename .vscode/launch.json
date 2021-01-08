@@ -7,6 +7,24 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "rustab",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rustab",
+                    "--package=rustab"
+                ],
+                "filter": {
+                    "name": "rustab",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug executable 'generator'",
             "cargo": {
                 "args": [
@@ -20,10 +38,14 @@
                 }
             },
             "args": [
-                "-I", "${workspaceFolder}",
-                "-h", "windows.h",
-                "-h", "wintab/include/WINTAB.H",
-                "-h", "wintab/include/PKTDEF.H",
+                "-I",
+                "${workspaceFolder}",
+                "-h",
+                "windows.h",
+                "-h",
+                "wintab/include/WINTAB.H",
+                "-h",
+                "wintab/include/PKTDEF.H",
             ],
             "cwd": "${workspaceFolder}",
             "env": {
